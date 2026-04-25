@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Divya Sriram Patel — Senior AI Product Manager</title>
+  <meta name="description" content="Senior AI Product Manager specializing in 0→1 product builds in B2B healthcare. Builder, writer, and thinker working at the intersection of AI and health." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gold: #C9920A;
+      --gold-light: #F5E6C0;
+      --gold-pale: #FAF4E6;
+      --ink: #1A1208;
+      --ink-mid: #4A4030;
+      --ink-light: #8A7A60;
+      --cream: #FAF8F4;
+      --cream-dark: #F0EDE6;
+      --white: #FFFFFF;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--cream);
+      border-bottom: 1px solid var(--cream-dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      height: 56px;
+    }
+
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 5rem 2.5rem 4rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .hero-name {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--ink);
+      margin-bottom: 0.3rem;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 2rem;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero-headline {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 6vw, 5.2rem);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      max-width: 800px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-headline em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-subhead {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--ink-mid);
+      max-width: 540px;
+      line-height: 1.75;
+      margin-bottom: 3rem;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--ink);
+      color: var(--gold-light);
+      padding: 0.85rem 1.75rem;
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold);
+      color: var(--ink);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: var(--ink);
+      padding: 0.85rem 1.75rem;
+      border: 1px solid var(--ink-light);
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* ── SECTION HEADERS ── */
+    .section-label {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 1rem;
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    /* ── WORK ── */
+    #work {
+      background: var(--white);
+      padding: 3.5rem 2.5rem;
+    }
+
+    .work-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .work-header {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--cream-dark);
+      padding-bottom: 1.25rem;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 0;
+    }
+
+    .work-card {
+      border: 1px solid var(--cream-dark);
+      padding: 1.5rem;
+      position: relative;
+      transition: background 0.2s;
+    }
+
+    .work-card:hover { background: var(--cream); }
+
+    .work-card-number {
+      font-family: var(--serif);
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--ink-mid);
+      line-height: 1;
+      margin-bottom: 0.75rem;
+      user-select: none;
+    }
+
+    .work-card-company {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+
+    .work-card-title {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+      line-height: 1.2;
+    }
+
+    .work-card-before {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      margin-bottom: 0.25rem;
+    }
+
+    .work-card-body {
+      font-size: 0.85rem;
+      color: var(--ink-mid);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .work-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .work-tag {
+      font-size: 0.67rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--cream);
+      color: var(--ink-mid);
+      padding: 0.3rem 0.65rem;
+      border: 1px solid var(--cream-dark);
+    }
+
+    .work-card-image {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+
+    .work-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .work-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--ink);
+      color: var(--gold-light);
+      padding: 0.6rem 1.25rem;
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .work-card-link:hover {
+      background: var(--gold);
+      color: var(--ink);
+    }
+
+    /* ── CURRENTLY BUILDING ── */
+    #building {
+      padding: 3.5rem 2.5rem;
+      background: var(--ink);
+    }
+
+    .building-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .building-inner .section-label { color: var(--gold); }
+
+    .building-inner .section-title { color: var(--cream); }
+
+    .building-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .building-card {
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 2rem;
+      position: relative;
+      transition: border-color 0.2s;
+    }
+
+    .building-card:hover { border-color: var(--gold); }
+
+    .building-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .building-status::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .building-card-title {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+
+    .building-card-body {
+      font-size: 0.9rem;
+      color: var(--ink-light);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .building-link {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: gap 0.2s;
+    }
+
+    .building-link:hover { gap: 0.7rem; }
+
+    .building-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .building-tag {
+      font-size: 0.67rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: rgba(255,255,255,0.06);
+      color: rgba(250,248,244,0.6);
+      padding: 0.3rem 0.65rem;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .building-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--gold);
+      color: var(--ink);
+      padding: 0.75rem 1.5rem;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .building-btn:hover {
+      background: var(--gold-light);
+    }
+
+    /* ── WRITING ── */
+    #writing {
+      padding: 3.5rem 2.5rem;
+      background: var(--cream);
+    }
+
+    .writing-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .writing-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--cream-dark);
+      padding-bottom: 1.25rem;
+      gap: 2rem;
+    }
+
+    .writing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1px;
+      background: var(--cream-dark);
+      border: 1px solid var(--cream-dark);
+      margin-bottom: 1.25rem;
+    }
+
+    .writing-card {
+      background: var(--white);
+      padding: 1.25rem;
+      transition: background 0.2s;
+    }
+
+    .writing-card:hover { background: var(--gold-pale); }
+
+    .writing-card-type {
+      font-size: 0.67rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .writing-card-title {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .writing-card-excerpt {
+      font-size: 0.88rem;
+      color: var(--ink-mid);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .writing-read-more {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s, gap 0.2s;
+    }
+
+    .writing-read-more:hover { color: var(--gold); gap: 0.7rem; }
+
+    .subscribe-strip {
+      background: var(--gold-pale);
+      border: 1px solid var(--gold-light);
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .subscribe-text p:first-child {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.25rem;
+    }
+
+    .subscribe-text p:last-child {
+      font-size: 0.88rem;
+      color: var(--ink-mid);
+    }
+
+    /* ── POV ── */
+    #thinking {
+      padding: 3.5rem 2.5rem;
+      background: var(--white);
+    }
+
+    .thinking-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .thinking-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 0;
+      margin-top: 2rem;
+      border: 1px solid var(--cream-dark);
+    }
+
+    .thinking-card {
+      padding: 2.5rem;
+      border-right: 1px solid var(--cream-dark);
+      position: relative;
+    }
+
+    .thinking-card:last-child { border-right: none; }
+
+    .thinking-num {
+      font-family: var(--serif);
+      font-size: 0.9rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .thinking-statement {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.35;
+      margin-bottom: 1rem;
+    }
+
+    .thinking-body {
+      font-size: 0.88rem;
+      color: var(--ink-mid);
+      line-height: 1.75;
+    }
+
+    /* ── CONNECT ── */
+    #connect {
+      padding: 7rem 2.5rem;
+      background: var(--cream);
+      text-align: center;
+    }
+
+    .connect-inner { max-width: 640px; margin: 0 auto; }
+
+    .connect-inner .section-title {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      margin-bottom: 1rem;
+    }
+
+    .connect-sub {
+      font-size: 1rem;
+      color: var(--ink-mid);
+      line-height: 1.75;
+      margin-bottom: 3rem;
+    }
+
+    .connect-links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink);
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    footer p {
+      font-size: 0.75rem;
+      color: var(--ink-light);
+      letter-spacing: 0.05em;
+    }
+
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    /* ── DIVIDER ── */
+    .rule {
+      width: 2.5rem;
+      height: 2px;
+      background: var(--gold);
+      margin-bottom: 2rem;
+    }
+
+    /* ── CUSTOM CURSOR ── */
+    * { cursor: none !important; }
+    a, button, [role="button"], input, label, select, textarea {
+      cursor: none !important;
+    }
+
+    .cursor {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 9999;
+      font-size: 22px;
+      line-height: 1;
+      transform: translate(-4px, -20px) scaleX(-1);
+      user-select: none;
+    }
+
+    /* ── SCROLL FADE ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      nav { padding: 0 1.25rem; }
+      .hero { padding: 4rem 1.25rem 3rem; }
+      #work, #building, #writing, #thinking, #connect { padding: 4rem 1.25rem; }
+      .writing-header { grid-template-columns: 1fr; }
+      .thinking-card { border-right: none; border-bottom: 1px solid var(--cream-dark); }
+      .thinking-card:last-child { border-bottom: none; }
+      footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">DSP</a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#writing">Writing</a></li>
+    <li><a href="#connect">Connect</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="hero-name">Divya Patel</p>
+  <p class="hero-eyebrow">Senior AI Product Manager</p>
+  <h1 class="hero-headline">
+    I build things before<br/>
+    there's a playbook.<br/>
+    <em>0→1.</em>
+  </h1>
+  <p class="hero-subhead">
+    Built zero to one experiences in B2B enterprise software and B2B2C healthcare.
+  </p>
+  <div class="hero-ctas">
+    <a href="#work" class="btn-primary">See my work →</a>
+    <a href="#writing" class="btn-secondary">Read my writing</a>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work">
+  <div class="work-inner">
+    <div class="work-header fade-in">
+      <p class="section-label">Selected Work</p>
+      <h2 class="section-title">Things I've built<br/><em>with the best teams.</em></h2>
+    </div>
+    <div class="work-grid">
+
+      <!-- Card 1: Evvy -->
+      <div class="work-card fade-in">
+        <img class="work-card-image" src="https://cdn.prod.website-files.com/68a62cdd4dad08b7bb5795c8/69257448466469cd5f013c0f_Home%20Hero%20Visual.webp" alt="Evvy vaginal health platform" loading="lazy" />
+        <div class="work-card-number">01</div>
+        <p class="work-card-company">Evvy</p>
+        <h3 class="work-card-title">B2B Foundation & Distribution</h3>
+        <p class="work-card-before">The gap</p>
+        <p class="work-card-body">
+          Evvy had a D2C product and a vision for enterprise—but no B2B infrastructure, no partner playbook, and no precedent. I built the commercial foundation from scratch: the Provider Portal, partner integrations with GrowBaby, Function Health, Viome, and WHOOP, and the internal ops that made B2B2C distribution repeatable.
+        </p>
+        <div class="work-card-footer">
+          <div class="work-tags">
+            <span class="work-tag">B2B2C</span>
+            <span class="work-tag">Provider Portal</span>
+            <span class="work-tag">Distribution</span>
+            <span class="work-tag">Women's Health</span>
+            <span class="work-tag">0→1</span>
+          </div>
+          <a href="https://www.evvy.com/" target="_blank" rel="noopener" class="work-card-link">Visit Evvy →</a>
+        </div>
+      </div>
+
+      <!-- Card 2: Atlassian Databases -->
+      <div class="work-card fade-in">
+        <img class="work-card-image" src="https://dam-cdn.atl.orangelogic.com/AssetLink/t36xp81a788wab32k4elh330cjv6rj3q/fl_keep_metadata/Confluence_Databases_Hero_Screen_2x.webp" alt="Confluence Databases product screenshot" loading="lazy" />
+        <div class="work-card-number">02</div>
+        <p class="work-card-company">Atlassian</p>
+        <h3 class="work-card-title">Confluence Databases</h3>
+        <p class="work-card-before">The gap</p>
+        <p class="work-card-body">
+          Teams were duct-taping spreadsheets onto Confluence to manage structured data. There was no native answer. I led the 0→1 product development for Confluence Databases—a new primitive for the platform—resulting in a US patent. This was Confluence's first purpose-built structured data experience.
+        </p>
+        <div class="work-card-footer">
+          <div class="work-tags">
+            <span class="work-tag">Enterprise SaaS</span>
+            <span class="work-tag">US Patent</span>
+            <span class="work-tag">Platform</span>
+            <span class="work-tag">Data Products</span>
+            <span class="work-tag">0→1</span>
+          </div>
+          <a href="https://www.atlassian.com/software/confluence/databases" target="_blank" rel="noopener" class="work-card-link">See Confluence Databases →</a>
+        </div>
+      </div>
+
+      <!-- Card 3: Confluence Creator Experience -->
+      <div class="work-card fade-in">
+        <img class="work-card-image" src="confluence-editor.png" alt="Confluence editor experience" loading="lazy" />
+        <div class="work-card-number">03</div>
+        <p class="work-card-company">Atlassian</p>
+        <h3 class="work-card-title">Confluence Creator Experience</h3>
+        <p class="work-card-before">The gap</p>
+        <p class="work-card-body">
+          Content creation in Confluence had accumulated years of friction. The editing experience was fragmented, and new capabilities weren't surfaced where creators needed them. I owned the end-to-end creator experience redesign—restructuring the surface, improving discoverability, and setting the foundation for AI-powered authoring.
+        </p>
+        <div class="work-card-footer">
+          <div class="work-tags">
+            <span class="work-tag">Editor Experience</span>
+            <span class="work-tag">Enterprise UX</span>
+            <span class="work-tag">AI Authoring</span>
+            <span class="work-tag">Platform</span>
+          </div>
+          <a href="https://www.atlassian.com/confluence-sandbox-editor" target="_blank" rel="noopener" class="work-card-link">Try the editor →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CURRENTLY BUILDING -->
+<section id="building">
+  <div class="building-inner">
+    <div class="fade-in">
+      <p class="section-label">Be the change you seek</p>
+      <h2 class="section-title" style="color: var(--cream); font-family: var(--serif);">
+        Currently Building
+      </h2>
+    </div>
+    <div class="building-grid">
+
+      <div class="building-card fade-in">
+        <p class="building-status">Live in Beta</p>
+        <h3 class="building-card-title">WTF — What the Fertility</h3>
+        <p class="building-card-body">
+          A fertility guidance app built from thousands of real women's forum experiences. Not a clinic. Not a study. A community-grounded guide that meets you where you are on your egg freezing journey—with no account required and no judgment.
+        </p>
+        <div class="building-tags">
+          <span class="building-tag">AI</span>
+          <span class="building-tag">Women's Health</span>
+          <span class="building-tag">RAG</span>
+          <span class="building-tag">0→1</span>
+        </div>
+        <a href="https://divyaspatel.github.io/WTFv2/" target="_blank" rel="noopener" class="building-btn">Explore WTF →</a>
+      </div>
+
+      <div class="building-card fade-in">
+        <p class="building-status">Live</p>
+        <h3 class="building-card-title">What Are You Wearing?</h3>
+        <p class="building-card-body">
+          A personal care product tracker that lets you log what you've tried, discover what your friends swear by, and get AI-powered insights on what actually works for you. Built for the skincare obsessive who wants signal over noise.
+        </p>
+        <div class="building-tags">
+          <span class="building-tag">AI</span>
+          <span class="building-tag">Consumer</span>
+          <span class="building-tag">Social</span>
+          <span class="building-tag">Skincare</span>
+        </div>
+        <a href="https://what-are-you-wearing-one.vercel.app/" target="_blank" rel="noopener" class="building-btn">Try it →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WRITING -->
+<section id="writing">
+  <div class="writing-inner">
+    <div class="writing-header fade-in">
+      <div>
+        <p class="section-label">Writing</p>
+        <h2 class="section-title">Thinking out loud,<br/><em>every week.</em></h2>
+      </div>
+      <a href="https://divyasrirampatel.substack.com" target="_blank" rel="noopener" class="btn-primary">All posts →</a>
+    </div>
+
+    <div class="writing-grid fade-in">
+      <div class="writing-card">
+        <p class="writing-card-type">My Weekly Newsletter</p>
+        <h3 class="writing-card-title">AI notetaking tools and the gendered invisible labor of memory</h3>
+        <p class="writing-card-excerpt">
+          Who benefits when AI remembers for us—and who was doing that remembering before? On the hidden work behind meeting notes, and why we're automating the wrong things.
+        </p>
+        <a href="https://divyasrirampatel.substack.com" target="_blank" rel="noopener" class="writing-read-more">Read →</a>
+      </div>
+
+      <div class="writing-card">
+        <p class="writing-card-type">Building in Public with AI</p>
+        <h3 class="writing-card-title">What building a fertility app taught me about RAG vs. context injection</h3>
+        <p class="writing-card-excerpt">
+          A practical breakdown from the WTF app build. When do you reach for RAG, and when is context injection just cleaner? The answer is less technical than you think.
+        </p>
+        <a href="https://divyasrirampatel.substack.com" target="_blank" rel="noopener" class="writing-read-more">Read →</a>
+      </div>
+
+      <div class="writing-card">
+        <p class="writing-card-type">AI Product Management</p>
+        <h3 class="writing-card-title">The eval problem: why most AI PMs are flying blind and don't know it</h3>
+        <p class="writing-card-excerpt">
+          Shipping AI features without evals is product management on vibes. Here's what it actually takes to know if your AI is doing what you think it's doing.
+        </p>
+        <a href="https://divyasrirampatel.substack.com" target="_blank" rel="noopener" class="writing-read-more">Read →</a>
+      </div>
+    </div>
+
+    <div class="subscribe-strip fade-in">
+      <div class="subscribe-text">
+        <p>Divya's Weekly Newsletter</p>
+        <p>AI, product management, women's health, and building in public — once a week, no filler.</p>
+      </div>
+      <a href="https://divyasrirampatel.substack.com" target="_blank" rel="noopener" class="btn-primary">Subscribe on Substack →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONNECT -->
+<section id="connect">
+  <div class="connect-inner fade-in">
+    <p class="section-label">Get in Touch</p>
+    <h2 class="section-title">Open to the<br/><em>right conversation.</em></h2>
+    <p class="connect-sub">
+      Available for fractional and contract PM work, advisory, and good conversations about AI, healthcare, and building things that don't exist yet.
+    </p>
+    <div class="connect-links">
+      <a href="https://www.linkedin.com/in/divyasrirampatel/" target="_blank" rel="noopener" class="btn-primary">LinkedIn →</a>
+      <a href="https://divyasrirampatel.substack.com" target="_blank" rel="noopener" class="btn-secondary">Substack</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Divya Sriram Patel</p>
+  <p>
+    <a href="https://divyasrirampatel.substack.com" target="_blank" rel="noopener">Newsletter</a>
+    &nbsp;·&nbsp;
+    <a href="https://www.linkedin.com/in/divyasrirampatel/" target="_blank" rel="noopener">LinkedIn</a>
+  </p>
+</footer>
+
+<script>
+  const cursor = document.createElement('div');
+  cursor.className = 'cursor';
+  cursor.textContent = '✏️';
+  document.body.appendChild(cursor);
+
+  const darkSections = [document.getElementById('building'), document.querySelector('footer')];
+  const clickables = 'a, button, [role="button"], input, label, select, textarea';
+
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top  = e.clientY + 'px';
+
+    const el = document.elementFromPoint(e.clientX, e.clientY);
+    const isClickable = el && (el.closest(clickables) !== null);
+    cursor.style.opacity = isClickable ? '0' : '1';
+    document.body.style.cursor = isClickable ? 'pointer' : 'none';
+    document.querySelectorAll(clickables).forEach(el => {
+      el.style.cursor = 'pointer';
+    });
+  });
+
+  document.addEventListener('mouseleave', () => { cursor.style.opacity = '0'; });
+  document.addEventListener('mouseenter', () => { cursor.style.opacity = '1'; });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
