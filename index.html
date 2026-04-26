@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Divya Sriram Patel — Senior AI Product Manager</title>
   <meta name="description" content="Senior AI Product Manager specializing in 0→1 product builds in B2B healthcare. Builder, writer, and thinker working at the intersection of AI and health." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23C9920A' rx='12'/><text y='78' x='50' text-anchor='middle' font-size='72' font-family='Georgia,serif' font-weight='bold' fill='white'>D</text></svg>" />
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://divyasrirampatel.com/" />
+  <meta property="og:title" content="Divya Sriram Patel — Senior AI Product Manager" />
+  <meta property="og:description" content="Built zero to one experiences in B2B enterprise software and B2B2C healthcare. Builder, writer, thinker." />
+  <meta property="og:image" content="https://divyasrirampatel.com/newsletter-banner.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Divya Sriram Patel — Senior AI Product Manager" />
+  <meta name="twitter:description" content="Built zero to one experiences in B2B enterprise software and B2B2C healthcare." />
+  <meta name="twitter:image" content="https://divyasrirampatel.com/newsletter-banner.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -239,6 +252,8 @@
       padding: 1.5rem;
       position: relative;
       transition: background 0.2s;
+      display: flex;
+      flex-direction: column;
     }
 
     .work-card:hover { background: var(--cream); }
@@ -285,6 +300,7 @@
       color: var(--ink-mid);
       line-height: 1.6;
       margin-bottom: 1rem;
+      flex: 1;
     }
 
     .work-tags {
@@ -319,7 +335,8 @@
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
-      margin-top: 1rem;
+      margin-top: auto;
+      padding-top: 1rem;
       flex-wrap: wrap;
     }
 
@@ -369,9 +386,27 @@
 
     .building-card {
       border: 1px solid rgba(255,255,255,0.1);
-      padding: 2rem;
+      overflow: hidden;
       position: relative;
       transition: border-color 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .building-card-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .building-card-content {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
 
     .building-card:hover { border-color: var(--gold); }
@@ -416,6 +451,7 @@
       color: var(--ink-light);
       line-height: 1.7;
       margin-bottom: 1.5rem;
+      flex: 1;
     }
 
     .building-link {
@@ -433,11 +469,20 @@
 
     .building-link:hover { gap: 0.7rem; }
 
+    .building-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: auto;
+      padding-top: 1rem;
+      flex-wrap: wrap;
+    }
+
     .building-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.4rem;
-      margin-bottom: 1.5rem;
     }
 
     .building-tag {
@@ -712,6 +757,65 @@
       transform: translateY(0);
     }
 
+    .building-disclaimer {
+      font-size: 0.72rem;
+      color: rgba(250,248,244,0.35);
+      font-style: italic;
+      margin-bottom: 0.75rem;
+      margin-top: -0.75rem;
+    }
+
+    /* ── NEWSLETTER BANNER ── */
+    .newsletter-banner-block {
+      margin-top: 1.5rem;
+    }
+
+    .newsletter-banner-link {
+      display: block;
+      position: relative;
+      text-decoration: none;
+      overflow: hidden;
+      border: 1px solid var(--gold-light);
+    }
+
+    .newsletter-banner-img {
+      width: 100%;
+      display: block;
+      max-height: 180px;
+      object-fit: cover;
+      object-position: center top;
+      transition: opacity 0.2s;
+    }
+
+    .newsletter-banner-link:hover .newsletter-banner-img { opacity: 0.9; }
+
+    .newsletter-banner-cta {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(26,18,8,0.75));
+      padding: 1.5rem 2rem 1rem;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .newsletter-banner-cta span {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      background: var(--ink);
+      padding: 0.55rem 1.25rem;
+      transition: background 0.2s;
+    }
+
+    .newsletter-banner-link:hover .newsletter-banner-cta span {
+      background: var(--gold);
+      color: var(--ink);
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 640px) {
       nav { padding: 0 1.25rem; }
@@ -803,7 +907,7 @@
             <span class="work-tag">Data Products</span>
             <span class="work-tag">0→1</span>
           </div>
-          <a href="https://www.atlassian.com/software/confluence/databases" target="_blank" rel="noopener" class="work-card-link">See Confluence Databases →</a>
+          <a href="https://www.atlassian.com/software/confluence/databases" target="_blank" rel="noopener" class="work-card-link">Check Out Databases →</a>
         </div>
       </div>
 
@@ -844,33 +948,44 @@
     <div class="building-grid">
 
       <div class="building-card fade-in">
-        <p class="building-status">Live in Beta</p>
-        <h3 class="building-card-title">WTF — What the Fertility</h3>
-        <p class="building-card-body">
-          A fertility guidance app built from thousands of real women's forum experiences. Not a clinic. Not a study. A community-grounded guide that meets you where you are on your egg freezing journey—with no account required and no judgment.
-        </p>
-        <div class="building-tags">
-          <span class="building-tag">AI</span>
-          <span class="building-tag">Women's Health</span>
-          <span class="building-tag">RAG</span>
-          <span class="building-tag">0→1</span>
+        <img class="building-card-image" src="wtf-app.png" alt="WTF — What the Fertility app screenshot" loading="lazy" />
+        <div class="building-card-content">
+          <p class="building-status">Live in Beta</p>
+          <h3 class="building-card-title">WTF — What the Fertility</h3>
+          <p class="building-card-body">
+            A fertility guidance app built from thousands of real women's forum experiences. Not a clinic. Not a study. A community-grounded guide that meets you where you are on your egg freezing journey—with no account required and no judgment.
+          </p>
+          <p class="building-disclaimer">For informational purposes only. Not medical advice.</p>
+          <div class="building-card-footer">
+            <div class="building-tags">
+              <span class="building-tag">AI</span>
+              <span class="building-tag">Women's Health</span>
+              <span class="building-tag">RAG</span>
+              <span class="building-tag">0→1</span>
+            </div>
+            <a href="https://divyaspatel.github.io/WTFv2/" target="_blank" rel="noopener" class="building-btn">Explore WTF →</a>
+          </div>
         </div>
-        <a href="https://divyaspatel.github.io/WTFv2/" target="_blank" rel="noopener" class="building-btn">Explore WTF →</a>
       </div>
 
       <div class="building-card fade-in">
-        <p class="building-status">Live</p>
-        <h3 class="building-card-title">What Are You Wearing?</h3>
-        <p class="building-card-body">
-          A personal care product tracker that lets you log what you've tried, discover what your friends swear by, and get AI-powered insights on what actually works for you. Built for the skincare obsessive who wants signal over noise.
-        </p>
-        <div class="building-tags">
-          <span class="building-tag">AI</span>
-          <span class="building-tag">Consumer</span>
-          <span class="building-tag">Social</span>
-          <span class="building-tag">Skincare</span>
+        <img class="building-card-image" src="wayw-app.png" alt="What Are You Wearing app screenshot" loading="lazy" />
+        <div class="building-card-content">
+          <p class="building-status">Mockup</p>
+          <h3 class="building-card-title">What Are You Wearing?</h3>
+          <p class="building-card-body">
+            A personal care product tracker that lets you log what you've tried, discover what your friends swear by, and get AI-powered insights on what actually works for you. Built for the skincare obsessive who wants signal over noise.
+          </p>
+          <div class="building-card-footer">
+            <div class="building-tags">
+              <span class="building-tag">AI</span>
+              <span class="building-tag">Consumer</span>
+              <span class="building-tag">Social</span>
+              <span class="building-tag">Skincare</span>
+            </div>
+            <a href="https://what-are-you-wearing-one.vercel.app/" target="_blank" rel="noopener" class="building-btn">Try it →</a>
+          </div>
         </div>
-        <a href="https://what-are-you-wearing-one.vercel.app/" target="_blank" rel="noopener" class="building-btn">Try it →</a>
       </div>
 
     </div>
@@ -917,12 +1032,13 @@
       </div>
     </div>
 
-    <div class="subscribe-strip fade-in">
-      <div class="subscribe-text">
-        <p>Divya's Weekly Newsletter</p>
-        <p>AI, product management, women's health, and building in public — once a week, no filler.</p>
-      </div>
-      <a href="https://divyasrirampatel.substack.com" target="_blank" rel="noopener" class="btn-primary">Subscribe on Substack →</a>
+    <div class="newsletter-banner-block fade-in">
+      <a href="https://divyasrirampatel.substack.com" target="_blank" rel="noopener" class="newsletter-banner-link">
+        <img src="newsletter-banner.png" alt="Divya's Notes — Weekly Newsletter" class="newsletter-banner-img" />
+        <div class="newsletter-banner-cta">
+          <span>Subscribe on Substack →</span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
